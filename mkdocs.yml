@@ -1,0 +1,9 @@
+site_name: python_case_issue
+
+theme:
+  name: "material"
+
+plugins:
+  - search
+  - mkdocstrings
+
