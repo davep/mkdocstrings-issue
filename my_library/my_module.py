@@ -10,7 +10,15 @@ class MyClass:
     """str: This is MY_ATTR -- it's an upper-case name."""
 
     my_attr: int = 0
-    """str: This is my_attr -- it's a lower-case name."""
+    """int: This is my_attr -- it's a lower-case name."""
 
     My_Attr: bool = False
-    """str: This is My_Attr -- it's a mixed-case name."""
+    """bool: This is My_Attr -- it's a mixed-case name."""
+
+    MY_attr: float = 0.0
+    """float: This is MY_attr -- it's also mentioned in __init__"""
+
+    def __init__( self ):
+        # This will cause MY_attr to not get documented.
+        self.MY_attr = 0.0
+        """I wonder if this documents it though."""
